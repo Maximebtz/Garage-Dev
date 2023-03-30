@@ -5,20 +5,40 @@
     
 }
 
+
+:root{
+      --var-creme: #fff7e7;
+      --var-dark: #272e38;
+      --var-lightgreen: #8aa885;
+      --var-beige: #7e6d64;
+      --var-green: #576e1f;
+      --var-darkblue: #51637b;
+      --var-lightblue: #8892a6;
+      --var-red: #b33d35;
+}
+html, body, .section{
+  height: 100%;
+}
+
+html{
+  overflow-y:scroll ;
+  scroll-snap-type: y mandatory;
+}
+
 body{
     background-image: url(/Img/wwindo.png);
     background-size: cover;
     background-attachment: fixed;
-    
 }
+
+
 
 section {
     padding: 1rem;
     height: 100vh;
     text-align: center;
     position: relative;
-    
-scroll-snap-align: start end;
+    scroll-snap-align: start;
   }
 
 .list{
@@ -30,11 +50,14 @@ scroll-snap-align: start end;
     .nav-list{
         font-family: "Racing Sans One", cursive;
         font-weight: lighter;
-        color: ghostwhite;
         font-size: 25px;
         padding: 10px 50px;
+        :hover{
+          cursor: pointer;
+          color: var(--var-creme);
+        }
     }
-    
+
     a{
         color: ghostwhite;
     }
@@ -60,6 +83,7 @@ scroll-snap-align: start end;
     font-size: 10em;
     font-weight:lighter;
     .flipX {
+      color: var(--var-creme);
         animation: 0.5s anim-flipX ease infinite;
       }
       @keyframes anim-flipX {
@@ -110,7 +134,7 @@ scroll-snap-align: start end;
         }
 }
 
-.about-garage-sec2{
+.about-garage{
     h2{
         position: absolute;
         left: 20px;
@@ -123,5 +147,39 @@ scroll-snap-align: start end;
         font-weight:normal;
         text-decoration: underline;
        
+    }
+}
+
+
+.main-ag-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin: 12rem 5rem 2rem 50%;
+  grid-gap: 5em;
+}
+
+.about-content-1, .about-content-2, .about-content-3, .about-content-4{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color:#272e38a2 ;
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  color: var(--var-creme);
+  border: solid 1px var(--var-dark);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.40) 0px 5px 10px;
+  &:hover{
+    cursor: default;
+    transform: translateY(-5px);
+    border: 1px solid var(--var-creme);
+    box-shadow: rgba(0, 0, 0, 0.80) 0px 10px 15px;
+    
+}
+    h3{
+      font-family: 'Racing Sans One', cursive;
+      font-size: 2em;
     }
 }

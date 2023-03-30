@@ -4,6 +4,26 @@
   list-style: none;
 }
 
+:root {
+  --var-creme: #fff7e7;
+  --var-dark: #272e38;
+  --var-lightgreen: #8aa885;
+  --var-beige: #7e6d64;
+  --var-green: #576e1f;
+  --var-darkblue: #51637b;
+  --var-lightblue: #8892a6;
+  --var-red: #b33d35;
+}
+
+html, body, .section {
+  height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
 body {
   background-image: url(/Img/wwindo.png);
   background-size: cover;
@@ -15,7 +35,7 @@ section {
   height: 100vh;
   text-align: center;
   position: relative;
-  scroll-snap-align: start end;
+  scroll-snap-align: start;
 }
 
 .list {
@@ -27,9 +47,12 @@ section {
 .list .nav-list {
   font-family: "Racing Sans One", cursive;
   font-weight: lighter;
-  color: ghostwhite;
   font-size: 25px;
   padding: 10px 50px;
+}
+.list .nav-list :hover {
+  cursor: pointer;
+  color: var(--var-creme);
 }
 .list a {
   color: ghostwhite;
@@ -56,6 +79,7 @@ section {
   font-weight: lighter;
 }
 .title .flipX {
+  color: var(--var-creme);
   animation: 0.5s anim-flipX ease infinite;
 }
 @keyframes anim-flipX {
@@ -105,7 +129,7 @@ section {
   left: 10px;
 }
 
-.about-garage-sec2 h2 {
+.about-garage h2 {
   position: absolute;
   left: 20px;
   display: block;
@@ -116,4 +140,36 @@ section {
   font-size: 100px;
   font-weight: normal;
   text-decoration: underline;
+}
+
+.main-ag-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 12rem 5rem 2rem 50%;
+  grid-gap: 5em;
+}
+
+.about-content-1, .about-content-2, .about-content-3, .about-content-4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(39, 46, 56, 0.6352941176);
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  color: var(--var-creme);
+  border: solid 1px var(--var-dark);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px;
+}
+.about-content-1:hover, .about-content-2:hover, .about-content-3:hover, .about-content-4:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--var-creme);
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 10px 15px;
+}
+.about-content-1 h3, .about-content-2 h3, .about-content-3 h3, .about-content-4 h3 {
+  font-family: "Racing Sans One", cursive;
+  font-size: 2em;
 }/*# sourceMappingURL=style.css.map */
